@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import CyberFPSGameplay from './components/CyberFPSGameplay';
+import AboutUs from './components/AboutUs';
+import CryptoStraps from './components/CryptoStraps ';
+import Team from './components/Team';
+import Faq from './components/Faq';
+import Footer from './components/Footer';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Routes>
+        <Route path='/' exact element={<Header />}></Route>
+        <Route path='/CyberFPSGameplay' exact element={<CyberFPSGameplay />}></Route>
+        <Route path='/CryptoStraps' exact element={<CryptoStraps />}></Route>
+        <Route path='/Team' exact element={<Team />}></Route>
+        <Route path='/Faq' exact element={<Faq />}></Route>
+        <Route path='Footer' exact element={<Footer />}></Route>
+      </Routes>
+      {/* <Header /> */}
+      <CyberFPSGameplay />
+      <AboutUs />
+      <CryptoStraps />
+      <Team />
+      <Faq />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
