@@ -78,6 +78,7 @@ export const Discoard = () => {
 export const Playbtn = () => {
   return (
     <svg
+      className="gameplay_btn"
       width="64"
       height="64"
       viewBox="0 0 64 64"

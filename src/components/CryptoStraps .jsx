@@ -8,17 +8,23 @@ const CryptoStraps = () => {
   return (
     <div>
       <div className="bg-black py_cryptostrap">
-        <Container className="custom_container">
+        <Container className="custum_container">
           <Row className="align-items-center justify-content-center">
-            <Col lg={6} className="col-sm-11 col-10">
-              <img src={CryptoImg} alt="CryptoImg" className="w-100 mw_394" />
+            <Col lg={6} className="col-sm-12 col-10" data-aos="zoom-in">
+              <img src={CryptoImg} alt="CryptoImg" className="w-100 mw_432" />
             </Col>
             <Col lg={6} className="col-sm-12 col-11 pt-5 pt-lg-0">
-              <h2 className="ff-Audiowide fw-normal text-white fs-lg4 position-relative">
+              <h2
+                className="ff-Audiowide fw-normal text-white fs-lg4 position-relative"
+                data-aos="zoom-in-up"
+              >
                 CryptoStraps{" "}
               </h2>
-              <div className="blue_line pb-1"></div>
-              <p className="ff-Montserrat fs-sm6 fw-normal text-white lh_150 mw_568 opacity-75 pt-2">
+              <div className="blue_line pb-1" data-aos="zoom-in-up"></div>
+              <p
+                className="ff-Montserrat fs-sm6 fw-normal text-white lh_150 mw_568 opacity-75 pt-2"
+                data-aos="zoom-in-up"
+              >
                 CryptoStraps are firearms pushing the boundaries of 3D animated
                 art. CyberFPS will be powered by CryptoStraps $AMMO and is
                 directly integrated with the existing CryptoStraps NFTs. You

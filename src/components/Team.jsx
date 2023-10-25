@@ -10,9 +10,11 @@ import slide4 from "../assets/images/png/Arlen.png";
 
 function Team() {
   const settings = {
-    dots: false,
-    infinite: false,
-    speed: 300,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -24,6 +26,7 @@ function Team() {
           slidesToScroll: 1,
           centreMode: true,
           infinite: true,
+          dots: true,
         },
       },
       {
@@ -45,13 +48,29 @@ function Team() {
   return (
     <div>
       <div className="py_team">
-        <h2 className="text-center ff_audiowide fs_xl fw-normal lh_normal text-black mb-5 pb-2">
-          <span className="team_line position-relative ff-Audiowide">Team</span>
+        <h2 className="text-center ff_audiowide fs-lg4 fw-normal lh_normal text-black mb-5 pb-2">
+          <span
+            className="team_line position-relative ff-Audiowide"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
+            Team
+          </span>
         </h2>
-        <Container className="custom_container">
+        <Container
+          className="custum_container"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <Slider {...settings}>
             <div className="px-2 outline">
-              <img src={slide1} alt="GirlWithBlackJacket" className="w-100" />
+              <img
+                src={slide1}
+                alt="GirlWithBlackJacket"
+                className="w-100 teamImg"
+              />
               <h4 className="ff-Montserrat fs-md4 fw-semibold lh_normal text-black mt-3 mb-1">
                 Collin
               </h4>
@@ -60,7 +79,11 @@ function Team() {
               </p>
             </div>
             <div className="px-2 outline">
-              <img src={slide2} alt="GirlWithBlackJacket" className="w-100" />
+              <img
+                src={slide2}
+                alt="GirlWithBlackJacket"
+                className="w-100 teamImg"
+              />
               <h4 className="ff-Montserrat fs-md4 fw-semibold lh_normal text-black mt-3 mb-1">
                 Pharaox
               </h4>
@@ -69,7 +92,11 @@ function Team() {
               </p>
             </div>
             <div className="px-2 outline">
-              <img src={slide3} alt="GirlWithBlackJacket" className="w-100" />
+              <img
+                src={slide3}
+                alt="GirlWithBlackJacket"
+                className="w-100 teamImg"
+              />
               <h4 className="ff-Montserrat fs-md4 fw-semibold lh_normal text-black mt-3 mb-1">
                 Zach
               </h4>
@@ -78,7 +105,11 @@ function Team() {
               </p>
             </div>
             <div className="px-2 outline">
-              <img src={slide4} alt="GirlWithBlackJacket" className="w-100" />
+              <img
+                src={slide4}
+                alt="GirlWithBlackJacket"
+                className="w-100 teamImg"
+              />
               <h4 className="ff-Montserrat fs-md4 fw-semibold lh_normal text-black mt-3 mb-1">
                 Arlen
               </h4>

@@ -16,6 +16,29 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* --------------------------scrollbar---------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1eadb6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1eadb6;
+}
+
 /* ----------------------header-section------------------ */
 .Bg_black {
   background-image: url('./assets/images/png/BgBlack.png');
@@ -47,9 +70,7 @@
 }
 
 .get_btn:hover {
-  border: 2px solid #1eadb6;
-  color: #ffff !important;
-  background: transparent;
+  box-shadow: 0px 10px 20px 2px #1eacb657;
 }
 
 .learn_btn {
@@ -63,58 +84,59 @@
 }
 
 .learn_btn:hover {
-  border: 2px solid #1eadb6;
-  background-color: #1eadb6;
-  color: black !important;
+  box-shadow: 0px 10px 20px 2px #1eacb657;
 }
 
 .link {
-  padding: 4px 22px;
-}
-
-.link {
-  background-image: url('./assets/images/png/rectangle.png');
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  border: 2px solid #fff;
+  display: flex;
+  padding: 1px 16px;
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
 }
 
 .z_index_3 {
   z-index: 3 !important;
 }
 
-/* .hover_border::before {
-  content: '';
+.hover_border {
+  background: transparent;
+  /* position: relative; */
+}
+
+.hover_border:after,
+.hover_border:before {
+  content: "";
   display: block;
   height: 20px;
   position: absolute;
-  transition: all .3s linear;
+  transition: all .3s ease-in-out;
   width: 20px;
-
 }
 
-.hover_border:hover::before {
-  border-right: 3.5px solid #1eadb6;
-  border-top: 3.5px solid #1eadb6;
-  right: -5.2px;
-  top: -5.2px;
-}
-
-.hover_border::after {
-  content: '' !important;
-  display: block !important;
-  height: 20px !important;
-  position: absolute !important;
-  transition: all .3s linear !important;
-  width: 20px !important;
+.hover_border:after,
+.hover_border:before {
+  content: "";
+  display: block;
+  height: 20px;
+  position: absolute;
+  transition: all .3s ease-in-out;
+  width: 20px;
 }
 
 .hover_border:hover::after {
-  border-right: 3.5px solid #1eadb6 !important;
-  border-top: 3.5px solid #1eadb6 !important;
-  right: 5.2px !important;
-  top: 5.2px !important;
-} */
+  border-bottom: 4.5px solid #1eadb6;
+  border-left: 4.5px solid #1eadb6;
+  bottom: -6.2px;
+  left: -6.2px;
+}
+
+.hover_border:hover::before {
+  border-right: 4.5px solid #1eadb6;
+  border-top: 4.5px solid #1eadb6;
+  right: -6.2px;
+  top: -6.2px;
+}
 
 .svg_hover,
 .svg_hover1 {
@@ -129,6 +151,10 @@
 
 .svg_hover:hover path {
   stroke: #1EADB6;
+}
+
+.curser_pointer {
+  cursor: pointer;
 }
 
 /* --------------------------CyberFPS-Gameplay------------------------ */
@@ -159,8 +185,16 @@
 
 .play_btn {
   position: absolute;
-  transform: translateY(50%);
+  transform: translateY(0);
   cursor: pointer !important;
+}
+
+.gameplay_btn {
+  transition: 0.3s linear !important;
+}
+
+.gameplay_btn:hover {
+  transform: scale(1.2) !important;
 }
 
 .btn-cross {
@@ -283,7 +317,7 @@
 }
 
 .bg_white {
-  background-image: url('./assets/images/png/solana-bg-img.png');
+  background-image: url('./assets/images/png/dotedImg.png');
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -328,6 +362,15 @@
 
 .outline {
   outline: none !important;
+  cursor: pointer;
+}
+
+.teamImg {
+  transition: all 0.3s linear;
+}
+
+.teamImg:hover {
+  transform: scale(1.05) !important;
 }
 
 /* -----------------------------Faq-Section------------------------- */
@@ -365,7 +408,7 @@
 .accordion-button {
   position: relative;
   color: white;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 24px;
   font-weight: 600;
   flex-shrink: 0;
@@ -386,7 +429,7 @@
 
 .accordion-body {
   color: #FFF;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -398,7 +441,7 @@
 
 .accordion-body {
   color: #FFF;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -515,10 +558,6 @@
 }
 
 @media (min-width:992px) {
-  .custum_container {
-    max-width: 1140px !important;
-  }
-
   .mw_528 {
     max-width: 528px;
   }
@@ -531,32 +570,42 @@
     max-width: 568px;
   }
 
-  .mw_394 {
-    max-width: 394px;
+  .mw_432 {
+    max-width: 432px;
+  }
+}
+
+@media (min-width:1200px) {
+  .custum_container {
+    max-width: 1140px !important;
   }
 }
 
 @media (max-width:768px) {
   .py_solana {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .pt_gameplay {
-    padding-top: 90px;
+    padding-top: 40px;
   }
 
   .py_cyber {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .py_team {
-    padding: 90px 0px;
+    padding: 40px 0px;
+  }
+
+  .pt-modal {
+    padding-top: 40px !important;
   }
 
   .accordion-button {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -608,5 +657,10 @@
     --fs-md4: 24px;
     --fs-md8: 25px !important;
     --fs-lg4: 27px !important;
+  }
+
+  .gameplay_btn {
+    width: 40px !important;
+    height: 40px !important;
   }
 }

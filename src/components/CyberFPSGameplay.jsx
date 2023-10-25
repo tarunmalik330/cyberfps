@@ -7,10 +7,25 @@ function CyberFPSGameplay() {
   return (
     <div>
       <Container className="custum_container pt_gameplay">
-        <h2 className="fs-lg4 ff-Audiowide fw-normal text-center Cyberfps position-relative gameplay">
-          CyberFPS <span className="text-teal">Gameplay</span>
+        <h2
+          className="fs-lg4 ff-Audiowide fw-normal text-center Cyberfps position-relative gameplay"
+          data-aos="zoom-out-up"
+          data-aos-duration="2000"
+        >
+          CyberFPS{" "}
+          <span
+            className="text-teal"
+            data-aos="zoom-out-up"
+            data-aos-duration="2000"
+          >
+            Gameplay
+          </span>
         </h2>
-        <div className="d-flex flex-column justify-content-center align-items-center position-relative pt-modal">
+        <div
+          className="d-flex flex-column justify-content-center align-items-center position-relative pt-modal"
+          data-aos="zoom-out-down"
+          data-aos-duration="2000"
+        >
           <div
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
