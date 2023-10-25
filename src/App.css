@@ -16,6 +16,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden !important;
+}
+
 /* --------------------------scrollbar---------------------------- */
 /* width */
 ::-webkit-scrollbar {
