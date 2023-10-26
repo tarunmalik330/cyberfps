@@ -94,14 +94,14 @@ const Header = () => {
         </Container>
       </div>
       <div>
-        <Container className="custom_container pt-3 pt-lg-0">
+        <Container className="custum_container pt-3 pt-lg-0">
           <Row className="justify-content-lg-between justify-content-center align-items-center">
             <Col
               xs={11}
               sm={12}
               lg={6}
               xl={5}
-              className="d-flex flex-column justify-content-lg-start justify-content-center align-items-center"
+              className="d-flex flex-column justify-content-center align-items-lg-start align-items-center"
             >
               <img
                 src={HeaderLogo}
